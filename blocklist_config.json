@@ -1,0 +1,606 @@
+{
+  "name": "emmanuelmenon/adguard-biglist",
+  "description": "DNS blocklist for AdGuardHome based on SlyFox's Pi-Hole biglist",
+  "homepage": "https://github.com/emmanuelmenon/adguard-biglist",
+  "license": "GPLv3",
+  "sources": [
+    {
+      "name": "Spotify Ads",
+      "source": "https://raw.githubusercontent.com/dfederlein/dnsbl-dfed/master/spotifyads.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "AdAway Default Blocklist",
+      "source": "https://adaway.org/hosts.txt",
+      "type": "hosts",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "ethanr DNS Blacklist",
+      "source": "https://bitbucket.org/ethanr/dns-blacklists/raw/8575c9f96e5b4a1308f2f12394abd86d0927a4a0/bad_lists/Mandiant_APT1_Report_Appendix_D.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "NoTrack Malware Blocklist",
+      "source": "https://gitlab.com/quidsup/notrack-blocklists/raw/master/notrack-malware.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "First-party trackers host list",
+      "source": "https://hostfiles.frogeye.fr/firstparty-trackers-hosts.txt",
+      "type": "hosts",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "OSint Threat Intel",
+      "source": "https://osint.digitalside.it/Threat-Intel/lists/latestdomains.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Peter Lowe Hosts",
+      "source": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext",
+      "type": "hosts",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Phishing Army Blocklist Extended",
+      "source": "https://phishing.army/download/phishing_army_blocklist_extended.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Anudeep's Blacklist",
+      "source": "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt",
+      "type": "hosts",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Stalkerware",
+      "source": "https://raw.githubusercontent.com/AssoEchap/stalkerware-indicators/master/generated/hosts",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "bigdargon Hosts' VN",
+      "source": "https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts",
+      "type": "hosts",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Windows Spy Blocker",
+      "source": "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt",
+      "type": "hosts",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Dandelion Sprout's Anti-Malware List",
+      "source": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareHosts.txt",
+      "type": "hosts",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Game Console Adblock List",
+      "source": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "FadeMind - 2o7Net",
+      "source": "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.2o7Net/hosts",
+      "type": "hosts",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "FadeMind - Risk",
+      "source": "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Risk/hosts",
+      "type": "hosts",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "FadeMind - Spam",
+      "source": "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/add.Spam/hosts",
+      "type": "hosts",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "FadeMind - Unchecky Ads",
+      "source": "https://raw.githubusercontent.com/FadeMind/hosts.extras/master/UncheckyAds/hosts",
+      "type": "hosts",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Polish KADhosts",
+      "source": "https://raw.githubusercontent.com/PolishFiltersTeam/KADhosts/master/KADhosts.txt",
+      "type": "hosts",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Spam404 Main",
+      "source": "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "URLhaus Hosts",
+      "source": "https://urlhaus.abuse.ch/downloads/hostfile/",
+      "type": "hosts",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Firebog - Adguard DNS",
+      "source": "https://v.firebog.net/hosts/AdguardDNS.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Firebog - Admiral",
+      "source": "https://v.firebog.net/hosts/Admiral.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Firebog - Easylist",
+      "source": "https://v.firebog.net/hosts/Easylist.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Firebog - Easyprivacy",
+      "source": "https://v.firebog.net/hosts/Easyprivacy.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Firebog - Prigent Ads",
+      "source": "https://v.firebog.net/hosts/Prigent-Ads.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Firebog - Prigent Crypto",
+      "source": "https://v.firebog.net/hosts/Prigent-Crypto.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Firebog - RPiList Malware",
+      "source": "https://v.firebog.net/hosts/RPiList-Malware.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Firebog - RPiList Phishing",
+      "source": "https://v.firebog.net/hosts/RPiList-Phishing.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Firebog - w3kbl",
+      "source": "https://v.firebog.net/hosts/static/w3kbl.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "CoinBlocker",
+      "source": "https://zerodot1.gitlab.io/CoinBlockerLists/hosts_browser",
+      "type": "hosts",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Perflyst - Amazon Fire TV",
+      "source": "https://perflyst.github.io/PiHoleBlocklist/AmazonFireTV.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Perflyst - SessionReplay",
+      "source": "https://perflyst.github.io/PiHoleBlocklist/SessionReplay.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Perflyst - Smart TV AGH",
+      "source": "https://perflyst.github.io/PiHoleBlocklist/SmartTV-AGH.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Perflyst - Smart TV",
+      "source": "https://perflyst.github.io/PiHoleBlocklist/SmartTV.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Perflyst - Android Tracking",
+      "source": "https://perflyst.github.io/PiHoleBlocklist/android-tracking.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Blocklist Project - Ads",
+      "source": "https://blocklistproject.github.io/Lists/adguard/ads-ags.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Blocklist Project - Fraud",
+      "source": "https://blocklistproject.github.io/Lists/adguard/fraud-ags.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Blocklist Project - Malware",
+      "source": "https://blocklistproject.github.io/Lists/adguard/malware-ags.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Blocklist Project - Ransomware",
+      "source": "https://blocklistproject.github.io/Lists/adguard/ransomware-ags.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Blocklist Project - Redirect",
+      "source": "https://blocklistproject.github.io/Lists/adguard/redirect-ags.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Blocklist Project - Scams",
+      "source": "https://blocklistproject.github.io/Lists/adguard/scam-ags.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Blocklist Project - Tracking",
+      "source": "https://blocklistproject.github.io/Lists/adguard/tracking-ags.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Blocklist Project - Tiktok",
+      "source": "https://blocklistproject.github.io/Lists/adguard/tiktok-ags.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Blocklist Project - YouTube",
+      "source": "https://blocklistproject.github.io/Lists/adguard/youtube-ags.txt",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Cookie Consent Blocker",
+      "source": "https://raw.githubusercontent.com/johang/cookie-consent-hosts/master/hosts.txt",
+      "type": "hosts",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Next DNS - CNAME Cloaking",
+      "source": "https://raw.githubusercontent.com/nextdns/cname-cloaking-blocklist/master/domains",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Next DNS - Apple",
+      "source": "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/apple",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Next DNS - Huawei",
+      "source": "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/huawei",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Next DNS - Roku",
+      "source": "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/roku",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Next DNS - Samsung",
+      "source": "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/samsung",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Next DNS - Sonos",
+      "source": "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/sonos",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+      "name": "Next DNS - Windows",
+      "source": "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/windows",
+      "type": "adblock",
+      "transformations": [
+        "RemoveComments",
+        "Compress",
+        "Validate"
+      ]
+    },
+    {
+        "name": "Next DNS - Xiaomi",
+        "source": "https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi",
+        "type": "adblock",
+        "transformations": [
+            "RemoveComments",
+            "Compress",
+            "Validate"
+        ]
+    },
+    {
+        "name": "Hagezi Multi",
+        "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt",
+        "type": "adblock",
+        "transformations": [
+            "RemoveComments",
+            "Compress",
+            "Validate"
+        ]
+    },
+    {
+        "name": "Hagezi Fake",
+        "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt",
+        "type": "adblock",
+        "transformations": [
+            "RemoveComments",
+            "Compress",
+            "Validate"
+        ]
+    },
+    {
+        "name": "Hagezi Threat Intelligence Feed",
+        "source": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.txt",
+        "type": "adblock",
+        "transformations": [
+            "RemoveComments",
+            "Compress",
+            "Validate"
+        ]
+    },
+    {
+        "name": "NoCoin Hosts",
+        "source": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt",
+        "type": "hosts",
+        "transformations": [
+            "RemoveComments",
+            "Compress",
+            "Validate"
+        ]
+    },
+    {
+        "name": "Anti AdBlock Filter",
+        "source": "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt",
+        "type": "hosts",
+        "transformations": [
+            "RemoveComments",
+            "Compress",
+            "Validate"
+        ]
+    }
+],
+    "transformations": [
+      "RemoveComments",
+      "Validate",
+      "Deduplicate",
+      "TrimLines",
+      "InsertFinalNewLine",
+      "RemoveEmptyLines"
+    ]
+}
