@@ -435,16 +435,6 @@
       ]
     },
     {
-      "name": "Blocklist Project - Tiktok",
-      "source": "https://blocklistproject.github.io/Lists/adguard/tiktok-ags.txt",
-      "type": "adblock",
-      "transformations": [
-        "RemoveComments",
-        "Compress",
-        "Validate"
-      ]
-    },
-    {
       "name": "Blocklist Project - YouTube",
       "source": "https://blocklistproject.github.io/Lists/adguard/youtube-ags.txt",
       "type": "adblock",
